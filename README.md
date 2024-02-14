@@ -1,16 +1,8 @@
-# 100+ Javascript Projects for Beginners by JSBeginners.com
-This is the entry repository for all of my projects over at, JSBeginners.com.
 
-If you want to see these projects in action, go to [100+ javascript projects for beginners](https://jsbeginners.com/javascript-projects-for-beginners/).  
+## List of 100+ Javacript tutorial by pradeep
+hi my name is pradeep this tutorial for beginners for learn javascript from crash.
 
-Follow the links on the above page to see the individual project and to see the source from which the project came. 
-
-You'll also find the link to each project's individual source files so **you can do all these beginner projects yourself**. 
-
-**Please note, if there isn't a link to one of the projects on the page above, I just haven’t completed the project yet.**
-
-## List of 100+ Javacript Projects for Beginners
-
+## here is some osm project if you learn javascript you can make these project
 1. Change Background Color Project
 2. Hex Change Background Color Project
 3. Random Quotes Project
@@ -151,20 +143,6 @@ You'll also find the link to each project's individual source files so **you can
 138. Countdown Clock Project
 139. Wack-a-Mole Game Project
 
-## 100 JavaScript Projects for Beginners Challenge
+ 
 
-It's simple, but not easy.
-
-1. Follow the link above to find any of the projects in the above list.
-
-2. Read the description and follow the link on the project’s page to see how it functions (If the link is not available yet, it means I haven’t yet completed the project. But no worries. You can simply go to the course where I found the project).
-
-3. For the projects I’ve completed, download or clone my repository from GitHub.
-
-4. Delete the contents of the app.js file (or any other relevant js files) and then try to code out the JavaScript functionality for yourself.
-
-5. Once you complete the app, share it in the comments on the JavaScript project page on the blog so everyone can acknowledge your accomplishment! That’s it!
-
-6. **Bonus:** Share your completed project on Twitter with the hashtags #JSBeginners #100DaysOfCode
-
-### Coming Later, React and Node Projects...
+ 
