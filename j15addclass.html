@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .laptop {
+            background-color: red;
+        }
+
+        .draw {
+            background-color: aqua;
+        }
+
+        .size{
+            font-size: 4rem;
+        }
+    </style>
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+
+    <button id="abc">click</button>
+    <button class="remover">remove</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quo quidem labore at, vitae, quos adipisci dolorum
+        esse dolore, eveniet quis magnam cumque ducimus accusantium perspiciatis praesentium. Nemo, voluptatum minima?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quo quidem labore at, vitae, quos adipisci dolorum
+        esse dolore, eveniet quis magnam cumque ducimus accusantium perspiciatis praesentium. Nemo, voluptatum minima?
+    </p>
+
+    <h1 id="head">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas ipsum id aperiam? Corporis nemo iusto
+        quos alias, ipsum aliquid nulla fugit at fugiat, a deleniti repellendus, dignissimos tenetur! Deleniti, quos.
+    </h1>
+
+    <button id="addclas">addclass</button>
+    <button id="removeclass">removeclass</button>
+    <button class="toggle">toggle</button>
+
+    <button id="delete">pararemove</button>
+
+    <button class="mobile laptop charger">item</button>
+
+    <!--
+     addEventListener();
+     removeEventListener();
+   
+   classlist=============================
+   add= document.querySelector("demo").classList.add("xyz");// it will add the class
+   remove= document.querySelector("demo").classList.remove("xyz");// it will remove the class
+   toggle= document.querySelector("demo").classList.toggle("xyz");// it will toggle the class
+   item= document.querySelector("demo").classList.item(1);// it will return the class
+   contains= document.querySelector("demo").classList.contains("xyz"); // it will return true or false -->
+
+
+
+    <script>
+
+        // addEventListener
+        // document.querySelector("#abc").addEventListener("click",function(){
+        //     document.body.style.background="tan";
+        // })
+
+        let r = document.getElementById("abc").addEventListener("click", abc);
+        function abc() {
+            document.body.style.background = "tan";
+        }
+
+        // removeEventListener
+        document.querySelector(".remover").addEventListener("click", remove);
+        function remove() {
+            document.querySelector("#abc").removeEventListener("click", abc)
+        }
+
+
+        // add classes
+        document.querySelector("#addclas").addEventListener("click", function () {
+            document.querySelector("#head").classList.add("laptop");
+        })
+        // remove class
+        document.querySelector("#removeclass").addEventListener("click", function () {
+            document.querySelector("#head").classList.remove("laptop");
+        })
+
+        // toggle
+        document.querySelector(".toggle").addEventListener("click", function () {
+          document.querySelector("#head").classList.toggle("size")
+        })
+        
+    </script>
+
+</body>
+
+</html>
+
+
+
+ 

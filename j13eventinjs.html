@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onkeypress="key()">
+
+    <button onclick="single()">click</button>
+    <button ondblclick="double()">double</button>
+    <button oncontextmenu="right()">right</button>
+    <button onmouseleave="leave()">leave</button>
+    <button onmouseout="out()">out</button>
+    <button onmouseenter="Enter()">Enter</button>
+
+    <select name="" id="" onchange="change()">
+        <option value="">hindi</option>
+        <option value="">english</option>
+        <option value="">math</option>
+    </select>
+    <button onmouseover="over()">over</button>
+    <button onmousemove="move()">move</button>
+    <input type="text" onfocus="focusfunction(this) " placeholder="Enter Your Name">
+    <button onmouseup="up()" onmousedown="down()">updown</button>
+
+
+    <script>
+
+
+        function single() {
+            document.body.style.background = "aqua";
+            alert("this is single click");
+        }
+
+        function double() {
+            alert("Enter you name")
+        }
+
+        function right() {
+            alert("right")
+        }
+
+        function leave() {
+            alert("leave")
+        }
+
+        function out() {
+            alert("out")
+        }
+
+        function Enter() {
+            document.body.style.background = "tan";
+        }
+
+        function key() {
+            document.write("key press event");
+        }
+
+        function change() {
+            document.body.innerHTML= "<h1>change</h1>";
+        }
+
+        function over() {
+            document.write("this is over function")
+        }
+
+        function move() {
+            document.write("this is move function")
+        }
+
+        function focusfunction(a) {
+            a.style.background = "yellow";
+        }
+
+    
+        function up() {
+            document.body.style.background = "yellow";
+        }
+
+        function down() {
+            document.body.style.background = "red";
+        }
+
+    </script>
+</body>
+
+</html>

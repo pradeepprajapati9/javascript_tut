@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- what is event handling in js -->
+
+    <!-- In JavaScript, event handling refers to the process of writing code to respond to events triggered by user interactions or other actions within a web page. Events can be things like clicking a button, submitting a form, moving the mouse, or pressing a key.
+    
+    Identify the HTML element you want to listen for events on by select method
+    Attach an event listener to the selected element An event listener is a function that will be add the event and function will execute the code  -->
+
+    <!-- which  situation use  it for example ? -->
+
+    <!-- 1)Form Submission:
+    2)Mouse Events:
+    3)Keyboard Events: -->
+
+    <div class="container-fluid">
+
+    </div>
+    <form id="form">
+        <div class="container p-5">
+            <div id="alert" class="container">
+                <div class="alert-box">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-2">
+                <div class="col">
+                    <input type="text" id="Nameinput" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="col">
+                    <input type="number" id="Numberinput" class="form-control" placeholder="Enter your Number">
+                </div>
+                <div class="col">
+                    <input type="email" id="Emailinput" class="form-control" placeholder="Enter your Email">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col">
+                    <input type="password" id="Passwordinput" class="form-control" placeholder="Enter your  password">
+                </div>
+                <div class="col">
+                    <input type="text" id="Genderinput" class="form-control" placeholder="Enter your Gender">
+                </div>
+                <div class="col">
+                    <input type="text" id="Addressinput" class="form-control" placeholder="Enter your Address">
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+
+
+    <script>
+
+
+        let form = document.querySelector("#form");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let Nameinput = document.getElementById("Nameinput").value;
+            let Numberinput = document.getElementById("Numberinput").value;
+            let Emailinput = document.getElementById("Emailinput").value;
+            let Passwordinput = document.getElementById("Passwordinput").value;
+            let Genderinput = document.getElementById("Genderinput").value;
+            let Addressinput = document.getElementById("Addressinput").value;
+            if (Nameinput === '' || Numberinput === '' || Emailinput === '' || Passwordinput === '' || Genderinput === '' || Addressinput === '') {
+                alert("please fill all fields")
+
+            } else {
+                submitFormData(Nameinput, Numberinput, Emailinput, Passwordinput, Genderinput, Addressinput);
+            }
+        })
+
+        function submitFormData(Nameinput, Numberinput, Emailinput, Passwordinput, Genderinput, Addressinput) {
+            document.write("data submit");
+            document.write("Your Name:=>", Nameinput, "<br>");
+            document.write("Your Number:=>", Numberinput, "<br>");
+            document.write("Your Email:=>", Emailinput, "<br>");
+            document.write("Your Password:=>", Passwordinput, "<br>");
+            document.write("Your Gender:=>", Genderinput, "<br>");
+            document.write("Your Address:=>", Addressinput, "<br>");
+        }
+
+    </script>
+
+
+</body>
+
+</html>

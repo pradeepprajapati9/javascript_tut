@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        //Numbers can be written with or without decimals:
+        // let x = 3.14;
+        // let y = 3;
+        // console.log(y)
+
+        // Extra large or extra small numbers can be written with scientific (exponent) notation:
+        // let x = 123e6; // you can use e for grow 0 in 123 e=0 ans=123000000
+        // let y = 123e-5;// you can use -e for small 0 in 123 e=-0 ans=0.00123
+        // console.log(y)
+
+        // Integer Precision pending:
+        // let x = 999999999999999340; // before 15 number taking as number
+        // let y = 999999999999999; // after 15 number taking decimal
+        // console.log(x);
+
+
+        // Numeric Strings
+        // let a = "1223";
+        // let b = 2343;
+        // console.log(a+b);
+
+
+        // NaN - Not a Number
+        // let a = "abc";
+        // let b = NaN;
+        // console.log(a + b);
+
+        //Infinity
+        // for (let i = 0; i <= 10; i--) {
+        //     console.log(i);
+        // }
+
+        // Hexadecimal
+        // let a = 0xf00d;
+        // let b = 0x0f0;
+        // let c = 0x0ff;
+        // console.log(c);
+
+
+        // JavaScript Number Methods
+        // // toString()
+        // let myNumber = 32;
+        // let myString = myNumber.toString();
+        // console.log(typeof(myString));
+
+
+        // let x = 9.656;
+        // console.log(x.toExponential()); // 9.656e+0
+
+        // let x = 9.785234766;
+        // console.log(x.toFixed(3)); // 9.66 it will be fixed with 2 decimal
+
+        // let x = 9.673; pending
+        // console.log(x.toPrecision(3)); // 9.66 it  will be return spacfic length
+
+
+
+        // Converting Variables to Numbers
+        //  let n="234";
+        //  console.log(typeof(Number(n)));
+
+
+        // console.log(parseInt("42"));        // Returns 42 (parsed integer)
+        // console.log(parseInt("42.23"));      // Returns 42 (decimal part is ignored)
+        // console.log(parseInt("9ABC"));      // Returns 9 (parsed as hexadecimal)
+
+        //  console.log(parseFloat("3.14"));    // Returns 3.14 (parsed floating-point number)
+        //  console.log(parseFloat("3.14.5"))  // Returns 3.14 (parsing stops at the second decimal point)
+        // console.log(parseFloat("ABC"))      // Returns NaN (cannot be parsed into a number)
+
+
+        //Number.isInteger()
+        // console.log(Number.isInteger(40));
+        // console.log(Number.isInteger(40.34));
+
+
+        // Number.isSafeInteger() method method returns true if the argument is a safe integer.
+        // Number.isSafeInteger(42);           // true   
+        // Number.isSafeInteger(9007199254740991);  // true it is max range of safe integer
+        // Number.isSafeInteger(9007199254740992);  // false (exceeds safe integer range) it is out of range
+        // Number.isSafeInteger("42");         // false (string value)
+        // Number.isSafeInteger(3.14);         // false (floating-point number)
+        // Number.isSafeInteger(NaN);          // false
+        // Number.isSafeInteger(Infinity);     // false
+
+        
+
+
+ 
+
+        // number properties
+        // EPSILON	The difference between 1 and the smallest number > 1.
+        // MAX_VALUE	The largest number possible in JavaScript
+        // MIN_VALUE	The smallest number possible in JavaScript
+        // MAX_SAFE_INTEGER	The maximum safe integer(253 - 1)
+        // MIN_SAFE_INTEGER	The minimum safe integer - (253 - 1)
+        // POSITIVE_INFINITY	Infinity(returned on overflow)
+        // NEGATIVE_INFINITY	Negative infinity(returned on overflow)
+        // NaN	A "Not-a-Number" value
+
+
+    </script>
+</body>
+
+</html>

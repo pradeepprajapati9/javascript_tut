@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="head">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, quo!</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sed architecto eum? Eius, maiores architecto.
+        Dignissimos, eaque. Rerum, animi dolore. Cupiditate fugiat veniam dicta pariatur rerum dolorum minima culpa
+        natus.</p>
+
+    <ul id="list">
+        <li><a href="#">home</a></li>
+        <li><a href="#">home</a></li>
+        <li><a href="#">home</a></li>
+    </ul>
+
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis ducimus magnam fuga inventore facilis labore eligendi itaque non voluptates molestiae corrupti id doloribus aliquam repellendus odio, dolores in aliquid vitae!</h1>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolore.
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda dolorum magnam modi similique cumque
+            inventore molestiae soluta expedita.</h1>
+    </div>
+
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quaerat nihil corporis tempore quia voluptate nobis saepe. Eligendi mollitia amet numquam, placeat quibusdam veniam veritatis quis ea! Molestiae, nihil exercitationem.</h1>
+
+
+    <script>
+        // id
+        let id = document.getElementById("head");
+        id.style.fontSize = "4rem";
+        console.log(id)
+
+        // class
+        let c = document.getElementsByClassName("container")[0];
+        c.style.background = "tan";
+        console.log(c)
+
+        // tag
+        let t = document.getElementsByTagName("h1")[0];
+        t.style.transform = "rotate(10deg)"
+        console.log(t)
+
+
+        // queryselector
+        let query = document.querySelector('h1');
+        console.log(query);
+
+
+        //querySelectorAll
+        let all=document.querySelectorAll("h1");
+        console.log(all);
+
+
+        // innerhtml
+        document.querySelector(".container").innerHTML="<h1>somya</h1>";
+        // innerText
+        document.querySelector(".container").innerText="<h1>somya</h1>";
+
+        
+    </script>
+</body>
+
+</html>

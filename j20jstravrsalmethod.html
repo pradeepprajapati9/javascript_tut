@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .inner {
+            padding: 20px;
+            display: flex;
+            border: 4px solid green;
+        }
+
+        .containt-child {
+            padding: 30px;
+            background-color: red;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+<!-- dom traversal method
+        
+   1) parentNode                   returns the parent node means the parent of the element  
+   2) parentElement                returns the parent element if does not have any parent then it returns null
+   3) childNodes                   returns the child nodes like space enter text etc
+   4) children                     returns the child elements
+   5) firstChild                   returns the firstchild nodes like space enter text etc
+   6) firstElementChild            returns the firstchild element
+   7) lastChild                    returns the lastchild nodes like space enter text etc
+   8) lastElementChild             returns the lastchild element
+   9) nextSibling                  returns the nextSibling nodes like space enter text etc
+   10) nextElementSibling          returns the nextElementSibling
+   11) previousSibling             returns the previousSibling nodes like space enter text etc
+   12) previousElementSibling      returns the previsouSibling element 
+
+-->
+    <div class="container">
+        <h1>outer</h1>
+        <div class="inner">
+            <h1>inner</h1>
+            <div class="containt-child a">A</div>
+            <div class="containt-child b">B</div>
+            <div class="containt-child c">C</div>
+            <div class="containt-child d">D</div>
+        </div>
+        <h1></h1>
+      
+
+    </div>
+
+
+    <script>
+        
+         
+        
+        //parentNode
+        // let p = document.querySelector("html").parentNode;
+        // let p1 = document.querySelector("html").parentElement;
+        // console.log(p1)
+
+        // parentElement
+        // let pelement = document.querySelector(".container").parentElement;
+        // console.log(pelement)
+
+        //childNodes
+        // let ch = document.querySelector(".container").childNodes;
+        // console.log(ch)
+
+
+        // children return childelement
+        // let chidren = document.querySelector(".container").children;
+        // console.log(chidren)
+
+        // firstchild
+        // let first=document.querySelector('.inner').firstChild;
+        // console.log(first)
+
+        //firstElementChild
+        // let firstElement=document.querySelector('.inner').firstElementChild;
+        // console.log(firstElement)
+
+        // lastChild
+        // let first=document.querySelector('.inner').lastChild;
+        // console.log(first)
+
+        //lastElementChild
+        // let firstElement=document.querySelector('.inner').lastElementChild;
+        // console.log(firstElement)
+
+        //nextSibling
+        // let next=document.querySelector(".inner").nextSibling;
+        // console.log(next)
+
+        // nextElementSibling
+        // let nextelem=document.querySelector(".inner").nextElementSibling;
+        // console.log(nextelem)
+
+        // previousSibling
+        // let prev=document.querySelector('.d').previousSibling;
+        // console.log(prev)
+
+        // previousElementSibling
+        let pre=document.querySelector('.c').previousElementSibling;
+        console.log(pre)
+
+    </script>
+</body>
+
+</html>
+
+
+ 

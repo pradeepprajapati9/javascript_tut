@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family:sans-serif;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <h1 id="Data">Here is some Javascript arry funciton implementation</h1>
+</body>
+
+
+<script>
+
+
+
+    let firstArray = [102, 1, 2, 15, 100, 0, 49, 50];
+
+    // how to find length
+    document.write("length=>",firstArray.length,"<br>")
+
+
+    // //if want to delete some number
+        delete firstArray[0]
+       document.write("delete=>",firstArray,"<br>");
+
+
+
+    // if you want to sorting the value of number and string first letter and first number
+    let text=["Sanjay","Rahul","Pinki","Kunal","Ravi","Abhi","Bidi","Akash"];
+    let num=[0,2,8,3.5,0.3,5,0.3,5.3,17,105];
+    document.write("sorting the value=>",num.sort(),"<br>")
+    document.write("sorting the value=>",text.sort(),"<br>")
+    document.write("sorting the value=>",firstArray.sort(),"<br>")
+  
+
+    // if you want to print reverse
+    document.write("print reverse=>",text.reverse(),"<br>")
+
+
+    //  if you want to delete last content in arry
+     var Creat=[12,34,56,78,999];
+        Creat.pop();
+     document.write(" delete last content=>",Creat,"<br>")    
+
+
+     // if you want to add value in last
+       Creat.push("akash",12);
+       document.write(" add value in last=>",Creat,"<br>"); 
+
+
+    //  if you want to remove start value in array
+     let Create=[12,34,56,78,999];
+    Create.shift()
+    document.write("remove start value in array=>",Create,"<br>");
+
+    // if you want to add start value in array
+    Create.unshift("bag")
+    document.write('add start value in array=>',Create,"<br>");
+
+
+    // if you want to add some content in middle of array values
+    let charger = ["laptopcharger ", " mobilecharger ", " maccharger ", "bag", "charger"];
+    let j=charger.join("/")
+     document.write("add some content in middle of array=>",j,"<br>")
+
+
+    //splice(positionindex(2),how_many_delete(3),new value(laptop))
+    let chargerate=[10,20,30,40,50,60];
+   document.write("print normal=>",chargerate,"<br>")
+   chargerate.splice(1,2,233);
+    document.write("after splice=>",chargerate,"<br>")
+     
+
+    //  reducing the dimensionality of an array.
+    const myArr = [
+         [12,34,56,77,88,889],
+         [12,34,56,77,88,889],
+         [12,56,77,88,889,12]
+        ];
+
+    console.log(myArr)
+    console.log(myArr.flat())
+
+
+
+    // check does value is arry value
+    let grid = new Array("laptop", "mobile", "desktop", 223, 23344, 3434, 43455);
+     
+      if(Array.isArray(grid)){
+        document.write("yes this is array<br>")
+      }else{
+        document.write("not array<br>")
+      }
+
+
+
+    // //how to check array index
+    let elect = ["laptop", "mobile", "desktop", "remote", "charger"];
+        document.write("check array index=>",elect.indexOf("remote"),"<br>")
+ 
+
+    // returns the index (position) of the last occurrence of a specified value in a string.
+    let textarry=[12,34,566,889,99,12,3434,12,3234,12,512]
+      document.write("eturns the index (position)=>",textarry.lastIndexOf(12),"<br>")
+
+
+
+    // some() check if one value pass a test in the array return true otherwise false
+    let a = [12, 2, 23, 9, 6, 1, 7];
+    let check1=a.some(test)
+
+    function test(b){
+       if(b>=23){
+           return true
+       }
+    }
+    document.write(check1)
+
+
+
+
+    // every() check if all value pass a test in the array//if pass =true   otherwise=false
+    let b = [10, 10, 13, 35, 26, 28];
+    let check =b.every(abc);
+    function abc(t){
+        return t>=9;
+    }
+    document.write(check)
+
+
+    // find() who is first value clear this condition and print the value owtherwise undefine
+    var numbers = [60, 1, 3, 40, 50, 60]
+    let check2 =numbers.find(xyz);
+    function xyz(t){
+        return t>=12;
+    }
+    console.log(check2)
+
+
+    //findindex who is first value clear this condition but return only index value
+    var numbers4 = [10, 23, 25, 40, 50, 60]
+    var bd = numbers4.findIndex(check5);
+    function check5(g) {
+        return g >= 22;
+    }
+    console.log(bd);
+
+
+    // who is clear the condition filter create an new array
+    var product = [1, 3, 5, 6, 34, 21, 12, 10, 20, 30, 40, 50, 60];
+   let fil=product.filter(abc);
+     function abc(x){
+        return x<12;
+    }
+   document.write(fil)
+
+ 
+
+    // // fill if you want to repace the value then use it
+    const fruits = ["cup", "Orange", "Apple", "Mango","mobile"];
+    var ab = fruits.fill("pen", 2, 4);
+    document.write(ab),"<br>";
+
+    //map function map is used math calculation and return new array
+    let numvalue = [25, 30, 14, 12, 23];
+    let numvalue1 = numvalue.map(count);
+    function count(x) {
+        return x + 2;
+    }
+    document.write(numvalue1,"<br>");
+
+        const fruit = ['Apple','Mango','Banana','GFG'];
+        let checfruit = fruit.map(abc);
+        function abc(y) {
+            return y;
+        }
+      document.write(fruit,"<br>");
+
+
+    const name = ["laptop", 10, "mobile", 520, "bag", 50, 100];
+    let search = name.map(function (c,i,a) {
+        return(
+              c+"<br>",
+              i +"<br>",
+              a+"<br>"
+        ) 
+    })
+    console.log(search,"<br>");
+
+
+</script>
+
+</html>

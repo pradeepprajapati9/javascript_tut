@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // how to create a class
+        class Person {
+            method() {
+                console.log('hello')
+            }
+        }
+
+        const person1 = new Person();
+        person1.method();
+
+
+
+        class Car {
+            constructor(color, type, model, horsepower) {
+                this.color = color;
+                this.type = type;
+                this.model = model;
+                this.horsepower = horsepower;
+
+            }
+            drive() {
+                console.log('Driving');
+            }
+        }
+
+        const car1 = new Car('red', 'sedan', 'Toyota', 200);
+        console.log(car1);
+        document.write(car1.color);
+        document.write(car1.type);
+        document.write(car1.model);
+        document.write(car1.horsepower);
+        console.log(car1.drive());
+
+
+        class method {
+            constructor() {
+                console.log('Thi is Constructro method')
+            }
+
+            Animal() {
+                console.log("Here is Animal method")
+            }
+
+            static staticMethod() {
+                console.log("Thisi si static method")
+            }
+        }
+
+        const method1 = new method(); // this is object
+        method1.Animal(); // this is prototype 
+        method.staticMethod();// this is static method 
+
+
+        class person {
+            constructor() {
+                document.write("this is a person class");
+            }
+
+            sum(a, b) {
+                document.write("this is a sum function", a + b, "<br>");
+            }
+
+        }
+
+        class student extends person {
+            constructor() {
+                super();
+                document.write("this is a student class", "<br>");
+            }
+            multi(x, y) {
+                document.write("this is a multi function", x * y);
+            }
+        }
+
+        let p = new student();
+        p.sum(12, 34)
+        p.multi(12, 3)
+    </script>
+
+</body>
+
+</html>

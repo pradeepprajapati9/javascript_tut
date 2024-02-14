@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .box {
+            padding: 50px;
+            font-size: 4rem;
+            margin: auto;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+    <h1 style="text-align: center;">here is Date Method in javascript </h1>
+    <div class="box"></div>
+
+
+    <script>
+        //get method of date
+        // document.write(new Date())
+
+
+        // var dates = new Date();
+        // document.write(dates.toDateString());
+        // document.write(dates.toLocaleDateString());
+        // document.write(dates.toLocaleString())
+
+
+        // var month = new Date();
+        // document.write(month.getMonth())// it is take month from 0 to 11
+
+
+        // var getyear = new Date();
+        //  document.write(getyear.getFullYear())
+
+        // var getday = new Date();
+        // document.write(getday.getDay())// it is take day from 0 to 6
+
+
+        // var getminutes = new Date();
+        // document.write(getminutes.getMinutes())// it is take minutes from 0 to 59
+
+        // var getseconds = new Date();
+        // document.write(getseconds.getSeconds())// it is take seconds from 0 to 59
+
+        //  var getmilliseconds = new Date();
+        //  document.write(getmilliseconds.getMilliseconds())// it is take milliseconds from 0 to 999
+
+        // var gethours = new Date();
+        // document.write(gethours.getHours())// it is take hours from 0 to 23
+
+
+
+
+        // // set method of date
+        // var setdate = new Date();
+        // setdate.setDate(14);
+        // document.write(setdate);
+
+
+        // var setmonth = new Date();
+        // setmonth.setMonth(0);
+        // document.write(setmonth); // it take month from 0 to 11
+
+        // var setyear = new Date();
+        // setyear.setFullYear(2020);
+        // document.write(setyear);
+
+        // var sethours = new Date();
+        // sethours.setHours(23);
+        // document.write(sethours);
+
+        // var setminutes = new Date();
+        // setminutes.setMinutes(20);
+        // document.write(setminutes);
+
+        // var setseconds = new Date();
+        // setseconds.setSeconds(20);
+        // document.write(setseconds);
+
+        // var setmilliseconds = new Date();
+        // setmilliseconds.setMilliseconds(24);
+        // console.log(setmilliseconds)
+
+    //    let a=new Date();
+    //     let b=a.toLocaleString();
+    //    document.write(b)
+
+
+        // 6 numbers specify year, month, day, hour, minute, second:
+
+
+
+
+let a=setInterval(abc,1000);
+   let target=document.querySelector(".box");
+    function abc(){
+        let a=new Date();
+        let change=a.toLocaleTimeString();
+        target.innerHTML=change;
+    }
+
+
+
+ 
+    </script>
+</body>
+
+</html>

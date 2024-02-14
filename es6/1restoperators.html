@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //REST TUTORIAL
+        function sum(name, course, ...args) {
+            document.write(`hello ${name} of ${course} :`);
+            let sum = 0;
+            for (let i in args) {
+                sum += args[i]
+            }
+            document.write(sum + "<br>")
+
+        }
+
+        sum("yahoo baba ", "batch", 20, 30, 60);
+        sum("ram kumar ", "ba", 20, 60);
+
+
+
+     
+
+
+
+    </script>
+</body>
+
+</html>

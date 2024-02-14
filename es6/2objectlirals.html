@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // object literals
+        // use variable as a property nane
+
+        let abcd = "whre is your school";
+        let xyz = "what can do for you";
+
+        var obj = {
+            abcd, xyz,
+        };
+        console.log(obj);
+
+
+        let n = "Title";
+
+        let checkObj = {
+            [n + "Name"]: "Naveen",
+            [n + "Age"]: "21",
+            school: "Naraina new delhi",
+            display: function () {
+                return `${this.TitleName} ${this.TitleAge} ${this.school}`;
+            }
+        }
+
+        // console.log(checkObj);
+        // console.log(checkObj.display());
+        // console.log(checkObj['display']());
+
+
+
+        // let FName = "Naveen";
+        // let Fage = 21;
+        // const makeObj=(FNames,Fages)=>{
+        //     return{
+        //         FNames,Fages,
+        //     }
+        // }
+        // console.log(FNames,Fages);
+
+    </script>
+</body>
+
+</html>

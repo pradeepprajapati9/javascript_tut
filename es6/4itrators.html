@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- a itrators is used to itrate the value like loop but loop is out of controll when we print 
+     the value loop all print the value till condition is false 
+      but from itrator we can control the print value and we can skip the value  but it is not 
+     possible skip and controll by loop so this is the reason that we use itrators 
+    
+     symbol is used to unique values-->
+
+
+
+    <script>
+        let a = [12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+        // for(let i=0;i<a.length;i++){
+        //     console.log(a[i]);
+        // }
+
+        // for(let i of a){
+        //     console.log(i);
+        // }
+        let itrate = a[Symbol.iterator]();//mainly used to itrate the value
+        let result = itrate.next();
+
+        //    while(!result.done){
+        //        console.log(result.value);
+        //        result=itrate.next();
+        //    }
+
+        itrate.next(); // skip value 
+        console.log(itrate.next().value);// print value    
+        console.log(itrate.next().value);
+        console.log(itrate.next().value);
+        console.log(itrate.next().value);
+
+
+        //    with text itrate the values
+        let txt = ["pradeep", "pradeep1", "pradeep2", "pradeep3", "pradeep4", "pradeep5", "pradeep6", "pradeep7", "pradeep8", "pradeep9", "pradeep10"];
+
+        let itrate1 = txt[Symbol.iterator]();//mainly used to itrate the value
+        let result1 = itrate1.next();
+
+        for (let char of txt) {
+            console.log(char);
+        }
+
+    </script>
+</body>
+
+</html>

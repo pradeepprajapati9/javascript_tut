@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <button onclick="FetchData()">ClicktoFetch</button>
+
+    <script>
+        const FetchData = () => {
+            let ajaxjs = new XMLHttpRequest();
+            ajaxjs.onreadystatechange = function () {
+                if (ajaxjs.readyState == 4 && ajaxjs.status == 200) {
+                    console.log(ajaxjs.responseText);
+                    document.querySelector("#demo").innerHTML=this.responseText;
+                }
+            }
+            ajaxjs.open("GET", "https://jsonplaceholder.typicode.com/posts",true);
+            ajaxjs.send();
+        }
+    </script>
+</body>
+
+</html>

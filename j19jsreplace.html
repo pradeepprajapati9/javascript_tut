@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con {
+            height: 200px;
+            background-color: black;
+        }
+
+        .con a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="list1">
+        <li><a href="#">home</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">sign</a></li>
+        <li><a href="#">visit</a></li>
+    </ul>
+
+    <div class="con"></div>
+
+    <ul id="list2">
+        <li><a href="#">about</a></li>
+        <li><a href="#">catagory</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">submenu</a></li>
+    </ul>
+
+    <h1>subject</h1>
+    <h2>abcdefg</h2>
+
+    <!--
+    removeChild
+    replaceChild
+    cloneNode
+    contains
+    hasAtribute
+    hasChildNode
+    isEqualNode -->
+    <img src="../images/a.avif" alt="">
+    <script>
+
+
+        let s = document.querySelector(".list1");
+        s.removeChild(s.children[0]);
+
+        let t = document.querySelector(".list1");
+        let r = document.createElement("li")
+        let tex = document.createTextNode("mobile");
+        r.appendChild(tex)
+        t.replaceChild(r, t.children[1])
+
+        let b = document.querySelector(".list1").children[2];
+        let copy = b.cloneNode(true);
+        document.querySelector(".con").appendChild(copy);
+
+
+        let tr = document.querySelector(".list1");
+        let tc=document.querySelector("li")
+        let check = tr.contains(tc)
+        console.log(check)
+
+        let cAt=document.querySelector(".list1").hasAttribute("class");
+        console.log(cAt)
+        // removeChild
+
+        // let T = document.querySelector(".list1");
+        // T.removeChild(T.children[0]);
+
+
+        // replaceChild
+        // let R = document.querySelector(".list1");
+        // let el = document.createElement("li")
+        // let text = document.createTextNode("this is javascript dom");
+        // el.appendChild(text);
+        // R.replaceChild(el, R.children[1]);
+
+
+        //cloneNode
+        // let li = document.querySelector(".list1").children[1];
+        // let copy = li.cloneNode(true)
+        // let container = document.querySelector(".con").appendChild(copy);
+
+
+        // contains
+        // let target = document.querySelector(".list1");
+        // let link = document.querySelector("p");
+        // let check = target.contains(link);
+        // console.log(check)
+
+        //hasAtribute
+        // let checkA=document.querySelector(".list1").hasAttribute("id");
+        // console.log(checkA)
+
+
+        //hasChildNode
+        // let s=document.querySelector("div").hasChildNodes("text");
+        // console.log(s)
+
+
+
+        // isEqualNode
+        // let li1 = document.querySelector(".list1");
+        // let li2 = document.querySelector(".list2");
+        // let comp = li1.isEqualNode(li2);
+        // console.log(comp);
+
+
+        // let a = document.querySelector("h1");
+        // let b = document.querySelector("h2");
+        // let compare = a.isEqualNode(b)
+        // console.log(compare)
+
+    </script>
+</body>
+
+</html>

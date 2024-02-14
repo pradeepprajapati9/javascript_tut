@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="jquery.js"></script>
+</head>
+
+<body>
+
+    <script>
+
+        class person {
+            constructor() {
+                console.log("This is first constructor");
+            }
+
+            sayhi() {
+                console.log("say hi form mama and pooja")
+            }
+        }
+        let a = new person();
+        a.sayhi();
+
+
+
+        class addTwoNumber {
+            constructor(a, b) {
+                this.add = b;
+                this.adds = a;
+                this.calu = this.add + this.adds;
+                console.log("this is costructor function");
+            }
+            sayhi() {
+                document.write(`this is your value ${this.calu}`);
+            }
+
+        }
+
+        let addtwo = new addTwoNumber(20, 34);
+        addtwo.sayhi();
+
+
+
+        function prom(complete) {
+            return new Promise(function (re, rej) {
+                console.log("fatching data");
+
+                setTimeout(() => {
+                    if (complete) {
+                        re("this is compelete is true");
+                    }
+                    else {
+                        rej("this is false");
+                    }
+                }, 2000)
+
+            });
+        }
+
+        prom(true).then((result) => {
+            console.log(result);
+        }).catch((error) => {
+            console.log(error);
+        })
+
+        // find to calculate from promise
+        function calcu(a, b) {
+            return new Promise(function (re, rej) {
+                console.log("fatching data");
+                let c = a + b;
+                setTimeout(() => {
+                    if (c) {
+                        re(`your answe is :${c}`);
+                    }
+                    else {
+                        rej("faild to calculate");
+                    }
+                }, 2000)
+
+            });
+        }
+
+        calcu(23, 34).then((result) => {
+            console.log(result);
+        }).catch((error) => {
+            console.log(error);
+        })
+
+
+        function json() {
+            return new Promise(function (re, rej) {
+                console.log("fatching data");
+                setTimeout(() => {
+                    $.get("https://jsonplaceholder.typicode.com/posts",function(data){
+                        re(data);
+                    }).fail(err=>{
+                        rej("failed to load json")
+                    })
+                }, 2000)
+
+            });
+        }
+
+        json().then((result) => {
+            console.log(result);
+        }).catch((error) => {
+            console.log(error);
+        })
+
+    </script>
+    
+</body>
+
+</html>

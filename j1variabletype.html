@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Global variables are declared outside the function and their value is accessible throughout the program.
+    Local variables are declared inside a function definition and have scope to that function only
+    -->
+    <script>
+        // globle scope
+        let carName = "vijay";
+        // code here can use carName
+
+        function myFunction() {
+            // code here can also use carName
+        }
+
+
+        // Local Scope
+        // code here can NOT use carName
+        function myFunction() {
+            let carName = "Volvo";
+            // code here CAN use carName
+        }
+
+          // code here can NOT use carName
+    </script>
+
+</body>
+
+</html>

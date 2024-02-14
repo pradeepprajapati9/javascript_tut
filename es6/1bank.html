@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Bank {
+            constructor() {
+                this.accounts = [];
+            }
+
+            createAccount(accountNumber, accountHolderName) {
+                const account = new Account(accountNumber, accountHolderName);
+                this.accounts.push(account);
+                return account;
+            }
+
+            getAccountByNumber(accountNumber) {
+                return this.accounts.find(account => account.accountNumber === accountNumber);
+            }
+        }
+
+        class Account {
+            constructor(accountNumber, accountHolderName) {
+                this.accountNumber = accountNumber;
+                this.accountHolderName = accountHolderName;
+                this.balance = 0;
+                this.transactions = [];
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+                const transaction = new Transaction('Deposit', amount);
+                this.transactions.push(transaction);
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log('Insufficient balance.');
+                    return;
+                }
+                this.balance -= amount;
+                const transaction = new Transaction('Withdrawal', -amount);
+                this.transactions.push(transaction);
+            }
+
+            getBalance() {
+                return this.balance;
+            }
+
+            getTransactionHistory() {
+                return this.transactions;
+            }
+        }
+
+        class Transaction {
+            constructor(type, amount) {
+                this.type = type;
+                this.amount = amount;
+                this.date = new Date();
+            }
+
+            toString() {
+                return `${this.date.toISOString()} - ${this.type}: ${this.amount}`;
+            }
+        }
+
+        // Example usage:
+        const bank = new Bank();
+        const account1 = bank.createAccount('12345', 'John Doe');
+        const account2 = bank.createAccount('67890', 'Jane Smith');
+
+        account1.deposit(1000);
+        account1.withdraw(200);
+        account2.deposit(500);
+
+        console.log(account1.getBalance()); // Output: 800
+        console.log(account1.getTransactionHistory());
+        /*
+        Output:
+        [
+          '2023-07-21T00:00:00.000Z - Deposit: 1000',
+          '2023-07-21T00:00:00.000Z - Withdrawal: -200'
+        ]
+        */
+
+        console.log(account2.getBalance()); // Output: 500
+        console.log(account2.getTransactionHistory());
+/*
+        Output:
+        [ '2023-07-21T00:00:00.000Z - Deposit: 500' ]
+        */
+
+    </script>
+
+</body>
+
+</html>

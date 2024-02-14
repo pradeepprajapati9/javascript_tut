@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- a genrators is used to itrate the value like loop but loop is out of controll when we print 
+    the value loop all print the value till condition is false 
+     but from genrators we can control the print value and we can skip the value  but it is not 
+    possible skip and controll by loop so this is the reason that we use genrators  -->
+    <!-- symbol is used to unique values -->
+
+    <script>
+        let a = [12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+        
+
+        function *genrators() {
+            console.log("first message");
+            yield "pouse next message";
+            console.log("second message");
+            yield "pouse next message";
+        }
+
+        let gen = genrators();
+        console.log(gen.next());
+        console.log(gen.next());
+        console.log(gen.next());
+    </script>
+</body>
+
+</html>

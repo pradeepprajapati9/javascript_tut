@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- inheritance a inheritabnce is used to  that allows a class to inherit properties and behaviors from another class. it is used to extend the functionality of a class and to create a new class. controll above classes with the help of inheritance -->
+
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+                console.log(`From constructor Your Name is ${this.name} and your age is ${this.age}`);
+            }
+
+            School(){
+                console.log(`From School Your Name is ${this.name} and your age is ${this.age}`);
+            }
+        }
+
+        class Student extends Person {
+            constructor(name, age, course) {
+                super(name, age);
+                super.School();
+                this.course = course;
+                console.log(` From Student Your Name is ${this.name} and your age is ${this.age} and your course is ${this.course}`);
+            }
+        }
+
+        let student = new Student('mohan', 22, 'web development');
+
+    </script>
+</body>
+</html>

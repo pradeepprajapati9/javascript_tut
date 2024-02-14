@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            padding: 20px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- js bom browser object modal
+        it is used to intract with the browserit is respresent the browser
+        1)Manipulating the browser window
+        2)Working with browser history
+        3)Managing cookies
+        4)Displaying alerts, prompts, and dialogs
+        5)Interacting with the user's system
+        6)Working with frames and iframes
+
+
+        1)window.innerWidth  use for window width
+        2)window.innerHeight  use for window height
+        3)window.outerWidth   use for window width
+        4)window.outerHeight  use for window height
+
+        5)window.scrollX      use for window scrollX
+        6)window.scrollY      use for window scrollY
+
+        7)window.pageXOffset   how many scroll x with value 
+        8)window.pageYOffset   how many scroll y with value
+
+        9)window.screenX       mouse event propert where is mouse distance x axix but on screen
+        10)window.screenY      mouse event propert where is mouse distance Y axix but on screen
+
+        12)window.open        // for open window
+        13)window.close        // for close window
+        
+        14)window.moveTo()     // for move
+        15)window.resizeTo()   // for resize
+
+        16)window.resizeBy()   // for resize
+        17)window.moveBy()     // for move
+
+        18)window.scrollTo()    // for scroll
+        19)window.scrollBy()    // for 
+        
+        20)window.clientX       // mouse event propert where is mouse distance x axix on document
+        21)window.clientY       // mouse event propert where is mouse distance y axix  on document
+
+        22)scrollWidth           // for know how many scroll width any box para
+        23)scrollHeight          // for know how many scroll height any para
+
+        24)offsetWidth           // for know how many scroll width any box  para inc padding border etc
+        25)offsetHeight          // for know how many scroll height any para   inc padding border etc
+
+        26)clientWidth           // for know how many scroll innerwidth any box  para inc padding etc
+        27)clientHeight          // for know how many scroll innerheight any para inc padding etc
+
+        28)online                //online or not
+        29)offline                //online or not
+
+        30) history.back()          // same as clicking back in the browser
+        31)history.forward()        //same as clicking forward in the browser
+
+    -->
+
+    <button class="open">clickToopenWindow</button>
+    <button class="close">closewindow</button>
+    <button class="moveto">clickTomovetoWindow</button>
+    <button class="moveby">clickToMovebyWindow</button>
+    <button class="resizeTo">resizeto</button>
+    <button class="resizeby">resizeby</button>
+    <button class="back" onclick="backs()">back</button>
+    <button class="forward" onclick="forwards()">forward</button>
+    <button style="position: fixed; background-color:yellow; bottom: 0px; right:0px;" class="scrollto">scrollto</button>
+    <button style="position: fixed; background-color:blue;" class="scrollby">scrollby</button>
+    <div class="box"></div>
+
+    <script>
+
+      
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+
+      //1) window.innerWidth
+
+        // console.log(window.innerHeight, ":innerHeight");
+        // console.log(window.innerWidth, ":innerWidth");
+        // console.log(window.outerHeight, ":outerheight");
+        // console.log(window.outerWidth, ":outerwidth");
+
+
+        //  5) window.scrollX
+        // console.log(window.scrollX + "scrollX");
+        // //6) window.scrollY
+        // console.log(window.scrollY + "scrollY");
+
+        // //7) window.pageXOffset
+        // console.log(window.pageXOffset + "pageXOffset");
+        // // 8) window.pageYOffset
+        // console.log(window.pageYOffset + "pageYOffset");
+
+
+        // // 9) window.screenX window.screenY
+        // document.addEventListener("mousemove",function(a){
+        //     let x=window.screenX;
+        //     let y=window.screenY;
+        //     console.log(a.x,"screenX");
+        //     console.log(a.y,"screenY");
+        // })
+
+
+
+
+        // let my;
+        // // //window.open
+        // document.querySelector(".open").addEventListener("click", function () {
+        //     // my = window.open("https://www.google.com/", "", "height=400px,width=400px,left=100px,top=100px");
+
+        //     my = window.open("", "", "height=400px,width=400px,left=100px,top=200px");
+        //     my.document.write("<h1>this is new window</h1>")
+        // });
+
+        // document.querySelector(".close").addEventListener("click", function () {
+        //     my.window.close();
+        // })
+        // //  move to
+        // document.querySelector(".moveto").addEventListener("click", function () {
+        //     my.moveTo(100, 100); // 100px move to
+        // });
+
+        // //  move by
+        // document.querySelector(".moveby").addEventListener("click", function () {
+        //     my.moveBy(300, 300); // add 300+100px move by
+        // });
+
+        // // resizeto
+        // document.querySelector(".resizeTo").addEventListener("click", function () {
+        //     my.resizeTo(300, 300); // add 500px to screen make
+        // })
+
+        // // resizeby
+        // document.querySelector(".resizeby").addEventListener("click", function () {
+        //     my.resizeBy(100, 100); // add 500+100=600
+        // });
+
+
+        // // scrollby
+        // document.querySelector(".scrollby").addEventListener("click", function () {
+        //     window.scrollBy(0, 100);  //100px scroll
+        // })
+
+        // document.querySelector(".scrollto").addEventListener("click", function () {
+        //     window.scrollTo(0, 0); // scroll to top
+        // })
+
+
+
+        // //offsetheight and offsetwidth
+        // let target = document.querySelector(".box");
+        // let h = target.offsetHeight;
+        // let w = target.offsetWidth;
+        // console.log(h, w);
+
+        // //scrollheight and scrollwidth
+        // console.log(target.scrollHeight, target.scrollWidth);
+
+        // //clientheight and clientwidth
+        // console.log(target.clientHeight, target.clientWidth);
+
+
+        // // clientX and clientY moues move how many with value of x and y form document
+        // window.addEventListener("mousemove", function (e) {
+        //     console.log(e.clientX, e.clientY);
+        // });
+
+        // // screenX and screenY moues event move how many with value of x and y from screen
+        // window.addEventListener("mousemove", function (e) {
+        //     console.log(e.screenX, e.screenY);
+        // });
+
+        // // offsetX and offsetY moues event move how many with value of x and y from box
+        // document.querySelector(".box").addEventListener("mousemove", function (e) {
+        //     console.log(e.offsetX, e.offsetY);
+        // });
+
+
+        // window.addEventListener("offline", function () {
+        //     document.write("<h1>offline</h1>");
+        // })
+
+        // window.addEventListener("online", function () {
+        //     document.write("<h1>online</h1>");
+        // })
+
+        // function backs() {
+        //     history.back();
+        // }
+
+        // function forwards(){
+        //     history.forward()
+        // }
+
+
+
+
+ -->

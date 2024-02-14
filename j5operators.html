@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+what is operators in javascript ?
+ 
+ a operators is a symbol that tells the interpreter to perform specific mathematical or logical manipulations.
+ bascially it is used to perform operations on variables and values.
+
+ how many type operators in javascript ?
+ 7 types of operators in javascript.
+
+1) arithmetic operators
+arithmetic operators are used to perform arithmetic between variables and/or values.
+
+for example:
++ addition
+- subtraction
+* multiplication
+/ division
+** exponentiation
+% modulus    
+++ increment   
+-- decrement
+
+2) assignment operators
+assignment operators are used to assign values to variables.
+for example:
+= assignment     
++= addition assignment
+-= subtraction assignment
+*= multiplication assignment
+/= division assignment
+%= modulus assignment  [it is only give reminder values]
+**= exponentiation assignment
+
+3) comparison operators
+comparison operators are used in logical statements to determine equality or difference between variables or values.
+
+for example:
+= assignment comparison operator
+== equal to 
+=== equal value and check data type  
+!= not equal  
+!== not equal value or check data type
+> greater than bigger than
+< less than   short
+>= greater than or equal to  
+<= less than or equal to
+ 
+4) logical operators
+logical operators are used to determine the logic between variables or values.
+for example:
+&& and 
+|| or
+! not 
+
+
+5) bitwise operators
+bitwise operators are used to perform bitwise operations on operands.
+for example:
+& and
+| or
+~ not
+^ xor
+ 
+
+6) string operators
+string operators are used to concatenate strings.
+for example:
++ concatenation
+, join
+
+7) conditional (ternary) operator
+conditional operator is the only javascript operator that takes three operands.
+for example:
+condition ? val1 : val2
+-->
+
+
+    <script>
+       
+
+        // 1) arithmetic operators
+        // var x = 5;
+        // var y = 3;
+
+        // document.write(x + y);
+
+        // var x = 5;
+        // var y = 2;
+        // var z = x - y;
+        // document.write(z);
+
+        // var x = 5;
+        // var y = 2;
+        // var z = x * y;
+        // document.write(z);
+
+        // var x = 24;
+        // var y = 2;
+        // var z = x / y;
+        // document.write(z);
+
+        // var x = 24;
+        // var y = 2;
+        // var z = x % y;  // modulus operator returns the division of remainder.
+        // document.write(z);
+
+        // var x = 4;
+        // var y = 3;
+        // var z = x ** y;  //return the squre values
+        // document.write(z); // 4*4*4=64
+
+        // let a = 12;
+        // a++;   //a=a+1; a=13;
+        // document.write(a);
+
+
+        // let x = 15;
+        // x--;   // x=x-1  15-1=14
+        // document.write(x);
+
+
+
+        //  2) assignment operators
+
+        // let a = 19;
+        // a += 50;
+        // a=a+50;
+        // a=19+50;
+        // a=69
+        // document.write(a)
+
+        // let a = 10;
+        // let b = 30;
+        // a += b;
+        // // a=a+b;
+        // // a=10+30;
+        // // a=40;
+        // document.write(b)
+
+
+        // var x = 10;
+        // var y = 90;
+        // x -= y
+        // document.write(x);
+
+
+        // var x = 10;
+        // var y = 90;
+        // x *= y;
+        // document.write(x)
+
+        // var x = 24;
+        // var y = 2;
+        // x /= y;
+        // document.write(x)
+
+        // var x = 7;
+        // var y = 5;
+        // x %= y;
+        // document.write(x);
+
+        // var x = 4;
+        // x **= 3;
+        // document.write(x)//   x=x**y   4**3=4096
+
+
+        // 3) comparison operators
+        // var x = 10;
+        // var y = 10;
+        // //  equal to operator returns true if the operands are equal.
+        // document.write(x==y); // true
+
+        // var x = 5;
+        // var y = "5";
+        // var z = x === y; // equal and check data type.
+        // document.write(z) // false
+
+        // var x = 5;
+        // var y = 5;
+        // var z = x != y; // not equal operator returns true if the operands are not equal.
+        // document.write(z) // false
+
+        // var x = 10;
+        // var y = "10";
+        // var z = x !== y; // not equal value and check not equal datatype
+        // document.write(z)
+
+        // var x = 5;
+        // var y = 8;
+        // var z = x > y; // check which values is big return true and falseF
+        // document.write(z)// false
+
+
+        // var x = 10;
+        // var y = 1;
+        // var z = x < y; // check which values is short return true and false
+        // document.write(z) // false
+
+        // var x = 10;
+        // var y = 10;
+        // var z = x >= y; // check which value is greater than and equal
+        // document.write(z)
+
+        // var x = 3;
+        // var y = 8;
+        // var z = x <= y; //check less than or equal to  true and false
+        // console.log(z); // true
+
+
+        // // 4) logical operators
+        // (&&=and) operator returns true if both operands are true.
+        // document.write(5 < 10 && 8 < 9 && 10 <= 10 && 10 <= 10); // true
+
+        // var x = 5;
+        // var y = 8;
+        // var z = 10; //  operator returns true if one of the operands is true.
+        // console.log(x>=y || y<=z || z>=x); // true
+
+
+
+        // var z = !(5 < 2 && 8 > 10); // (!=not=नहीं) operator returns true if the operand is false. nahi
+        // document.write(z) //  true
+
+
+        //5) bitwise operators  bascially it is used to perform operations on binary numbers.
+        // var x = 12;
+        // var y = 6;
+        //  (&=and=और)
+        //  document.write(x&y)
+
+        // var x = 13;
+        // var y = 3;
+        // var z = (x | y); // (|=or=या)
+        // document.write(z)
+
+
+        // var x = 5;
+        // var y = 8;
+        // var z = (x ^ y); // (^=xor)
+        // document.write(z)
+
+
+        // var x = 55;
+        // var y = 73;
+        // var z = (x<< y); // (<<=left shift)
+        // document.write(z)
+
+
+        // var x = 20;
+        // var y = 3;
+        // var z = (x >> y); // right shift)
+        // document.write(z)
+
+
+        // var x = 5;
+        // var y = 1;
+        // console.log(x >>> y); // (>>>=unsigned right shift)
+
+
+        // 6) string operators
+        // var x = "12";
+        // var y = 12;
+        // var z = x + y; // (+=concatenation)
+        // console.log(z); // 24
+
+        // var x = "hellow";
+        // var y = "ram";
+        // console.log(x, y); // 1212
+
+
+        // 7) conditional (ternary) a ternary operators is single line conditional statement
+
+        // let age = Number(prompt("enter your age"));
+        // let a = (age > 18) ? "your age is greater than 18" : "your age is less than 18";
+        // document.write(a)
+        // document.write(12 > 4 && 12 < 4 && 34>23);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

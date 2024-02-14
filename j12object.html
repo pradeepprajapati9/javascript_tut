@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- for in loop in javascript
+        a object is a collection of key value pair. and it is a complex datatype.
+        it is strore multiple value and multiple datatype and
+      -->
+
+
+    <script>
+
+        // first method objet create
+        let Device = {
+            Price: 3000,
+            Id: 2,
+            Name: "Laptop",
+            Qty: 123
+        }
+
+        // document.write(Device.Price)
+        // document.write(Device.Id)
+        // document.write(Device.Name)
+        // document.write(Device.Qty)
+        // document.write(Device.Price);
+
+        // for(let x in Device){
+        //     document.write(x,":",Device[x])
+        // }
+
+
+
+        //second method of object create
+        let chairs = new Object();
+
+        chairs.Name = "Nikhil";
+        chairs.Id = 1;
+        chairs.Price = 12345;
+        chairs.roll = 1233;
+
+        //  document.write(chairs.Name)
+        //  document.write(chairs.Id)
+        //  document.write(chairs.Price)
+
+        //  for(let c in chairs){
+        //     document.write(c,"=>",chairs[c],"<br>");
+        //  }
+
+
+
+
+        //third method Object create method
+        //  let b={
+        //     "name":"riya",
+        //     "class":8,
+        //     "school":"abc",
+        //     "address":"xyz"
+        //  }
+
+        //  console.log(b.name)
+        //   for(let x in b){
+        //     document.write(x,":",b[x],"<br>")
+        //   }
+
+
+        // array of object create
+        let animal = [
+            {
+                Id: 1,
+                Name: "Tiger",
+                Price: 2000,
+                qty: 2
+            },
+            {
+                Id: 2,
+                Name: "cat",
+                Price: 1000,
+                qty: 4
+            },
+            {
+                Id: 3,
+                Name: "horse",
+                Price: 3434,
+                qty: 23
+            },
+        ];
+
+        console.log(animal.length)
+        // document.write(animal[0].Id);
+        // document.write(animal[0].Name);
+        // document.write(animal[1].Price);
+
+
+        // for (let n = 0; n < animal.length; n++) {
+        //     document.write(animal[n].Id," ", animal[n].Name, animal[n].Price, animal[n].qty);
+        // }
+
+
+        // console.log(Employee)
+        //  document.write(Employee[0].roll)
+        //  document.write(Employee[1].name)
+        //  document.write(Employee[2].roll)
+
+        // for(let a=0;a<Employee.length;a++){
+        //     document.write(Employee[a].roll," ");
+        //     document.write(Employee[a].name,' ');
+        //     document.write(Employee[a].city,"<br>");
+        // }
+
+
+
+
+        let obj = {
+            id: 1,
+            price: 2344,
+            color: "red",
+            background: "tan",
+            qty: 12
+        }
+
+        // document.write(obj.id)
+        // document.write(obj.price)
+        // document.write(obj.color)
+        // document.write(obj.qty)
+
+        // let arr = [12, 34, 5, 6, 7, 89];
+
+        // for (let x in arr) {
+        //     console.log(x," ",arr[x])
+        // }
+
+
+        let mobile = new Object();
+        mobile.Name = "radhika";
+        mobile.sal = 30000;
+        mobile.y = 21;
+
+        // document.write(mobile.sal)
+        // document.write(mobile.y)
+        // document.write(mobile.Name)
+
+        for (let z in mobile) {
+            document.write(z, "=>", mobile[z], "<br>")
+        }
+
+
+        // arry of object
+
+        let carry = [
+            {
+                id: 1,
+                price: 2344,
+                color: "red",
+                background: "tan",
+                qty: 12
+            },
+
+            {
+                id: 2,
+                price: 2344,
+                color: "red",
+                background: "tan",
+                qty: 12
+            },
+            {
+                id: 3,
+                price: 2344,
+                color: "red",
+                background: "tan",
+                qty: 12
+            },
+            {
+                id: 4,
+                price: 2344,
+                color: "red",
+                background: "tan",
+                qty: 12
+            },
+            {
+                id: 5,
+                price: 2344,
+                color: "red",
+                background: "tan",
+                qty: 12
+            },
+            {
+                id: 6,
+                price: 2344,
+                color: "green",
+                background: "red",
+                qty: 12
+            }
+
+        ];
+
+
+
+        console.log(carry)
+        document.write(carry[0].)
+
+
+        document.write("<table border cellpadding='10' cellspacing='0'>  ");
+        for (let a in carry) {
+            document.write("<tr>");
+            document.write("<td>");
+            document.write(carry[a].id, " ")
+            document.write("</td>");
+            document.write("<td>");
+            document.write(carry[a].price, " ")
+            document.write("</td>");
+            document.write("<td>");
+            document.write(carry[a].color, " ")
+            document.write("</td>");
+            document.write("<td>");
+            document.write(carry[a].background, " ")
+            document.write("</td>");
+            document.write("<td>");
+            document.write(carry[a].qty, " ")
+            document.write("</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+
+        
+    </script>
+</body>
+
+</html>

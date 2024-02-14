@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <!--
+     what is function in javascript ?
+     a function is a block of code which is used to perform a particular task.
+     when we call a function it is known as calling a function.
+     function is work many times.
+
+     Functions are commonly used in JavaScript to handle events such as button clicks, form submissions, 
+     1)Modularity and Reusability
+     2)Performing TaskS
+     3)Event Handling:
+     4)Callbacks and Asynchronous Operations
+-->
+
+
+    <!-- 
+    function declaration 
+  1) normal function
+  2) function with parameter
+  3) function with return
+  4) funciton is callback function
+-->
+
+
+    <script>
+
+
+        // Normal 
+        // function abc() {
+        //     document.write("is this Your name ")
+        // }
+
+        // abc();
+
+
+        //2) function with parameter
+        // function Add(a,b) {
+        //     document.write("your Value is=>",a+b)
+        // }
+        // Add(12,13)
+
+        // function animal(t,c,m){
+        //     document.write('This Is ',t," ",c," ",m)
+        // }
+
+        // animal("Tiger","Cat","mouse")
+
+
+
+
+        //3) function with return
+        //     function Mobile() {
+        //         return "this is return function";
+        //     }
+        // document.write(Mobile(),"<br>")
+
+
+
+        // function add(a,b){
+        //     return a+b;
+        // }
+
+        // document.write(add(12,23))
+
+
+        //4) function with callback function
+        // function laptop() {
+        //     document.write("this is laptop","<br>")
+        // }
+        // function mobile() {
+        //     document.write("this is mobile","<br>")
+        // }
+
+
+        // function comman() {
+        //     laptop();
+        //     document.write("this is comman function","<br>")
+        // }
+
+        // comman(mobile());
+
+
+
+        
+        function abc() {
+            document.write("this is my number", "<br>")
+            document.write("it is my mobile", "<br>")
+            document.write("it is my laptop", "<br>")
+        }
+
+        abc();
+        abc();
+        abc();
+        abc();
+
+
+
+        function add(a, b) {
+            document.write("your value is ", " ", a, " ", b)
+        }
+
+        add("rupashi", 2323)
+
+
+        function sum(a, b, c, d) {
+            document.write("your sum values is", a + b + c + d);
+        }
+
+        sum(12, 34, 566, 75)
+
+
+        function animal(a, b) {
+            return a + b;
+        }
+
+        document.write(animal(12, 34))
+
+        document.write("<br>")
+
+
+        function sayhi() {
+            document.write("sayhi")
+        }
+
+        function sayby() {
+            document.write("sayby")
+        }
+
+        function comman() {
+            sayby()
+            sayhi()
+            document.write("this is comman funciton")
+        }
+
+        comman()
+
+
+
+
+
+
+        // how to create a function 
+        function xyz() {
+            document.write("thi is javascript class")
+        }
+        xyz()
+
+        // paremeter
+
+        function add(a, b) {
+            document.write("your sum values", a + b)
+        }
+        add(12, 34);
+
+
+
+        // function with return
+        function multi(a, b) {
+            return a * b;
+        }
+        document.write(multi(12, 3))
+
+        document.write("<br><br><br><br><br>    ")
+        // callback function 
+
+        function sayhi() {
+            document.write("say hi function")
+        }
+        function sayby() {
+            document.write("say by function")
+        }
+
+        function callback() {
+            sayhi()
+            document.write("this is callback function")
+        }
+
+        callback(sayby());
+
+
+
+        document.write("<br><br><br><br><br>    ")
+
+        function doSomething() {
+            document.write("Doing something...");
+        }
+
+        function onComplete() {
+            document.write("Operation complete!");
+        }
+
+        doSomething(onComplete());  
+
+
+    </script>
+</body>
+
+</html>

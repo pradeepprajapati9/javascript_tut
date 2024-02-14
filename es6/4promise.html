@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- promises have a three senariyo or states like
+    1) pending  
+    2) fulfilled
+    3) rejected
+    
+    -->
+
+    <script>
+        let status = true;
+        let pro = new Promise(function (resolve, reject) {
+            if (status) {
+                resolve("success");
+            } else {
+                reject("error");
+            }
+        })
+        
+        console.log(pro);
+
+        function getData(status) {
+            return new Promise(function (resolve, reject) {
+                console.log("loading...");
+                setTimeout(() => {
+                    if (status) {
+                        resolve("success");
+                    } else {
+                        reject("error")
+                    }
+                }, 2000);
+            })
+        }
+
+        const fulfilled = (succces) => {
+            console.log("succces")
+        }
+        const rejected = (error) => {
+            console.log("error")
+        }
+
+        getData(status).then(fulfilled).catch(rejected);
+
+
+
+
+
+        let poduct = new Promise((success) => {
+            setTimeout(() => {
+                console.log("MY PRODUCT HAS BEEN DELIVERED");
+                success("working");
+            }, 2000);
+        })
+        let poduct1 = new Promise((error) => {
+            setTimeout(() => {
+                console.log("MY PRODUCT HAS BEEN NOT DELIVERED");
+                error("not working");
+            }, 2000);
+        })
+
+        Promise.all([poduct, poduct1]).then(success => {
+            console.log("succces");
+        }).catch(error => {
+            console.log("error");
+        });
+    </script>
+</body>
+
+</html>

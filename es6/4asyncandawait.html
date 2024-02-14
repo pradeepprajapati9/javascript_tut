@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 10px;
+            text-transform: capitalize;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+    </style>
+</head> 
+
+<body>
+    <table border="" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody id="tabledata">
+               
+        </tbody>
+    </table>
+    <script>
+        async function getData() {
+            const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+            const result = await res.json();
+            let table = "";
+            result.forEach(element => {
+                table += `<tr>
+                    <td>${element.id}</td>
+                    <td>${element.title}</td>
+                    </tr>`;
+            });
+            document.getElementById("tabledata").innerHTML = table;
+        }
+        const GetData1 = getData();
+        console.log(GetData1);
+    </script>
+
+</body>
+
+</html>

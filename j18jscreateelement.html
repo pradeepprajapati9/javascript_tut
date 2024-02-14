@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+
+</style>
+
+
+<body>
+
+
+
+
+
+    <!-- create dom method
+        1) createElement()  // creates a new element means that tag
+        2) createTextNode()  // creates a new text node means that text
+        3) createComment()  // creates a new comment means that comment
+
+
+        append method in javascript  
+        1) appendChild()  // adds the text to the tag
+        3) insertBefore()  // adds the text to the tag but before the element
+
+        append and create method in javascript (shorthand method)
+        4) insertAdjacentElement() // h1 create and add the text to the tag  
+        5) insertAdjacentText()    // hello ji insertadjacentHMTL create and add the text to the tag
+        6) insertAdjacentHTML() // <h1>hello ji insertadjacentHMTL</h1>  create and add the tag.
+
+        have a positon in insertadjacent
+        1) beforebegin
+        2) afterbegin
+        3) beforeend
+        4) afterend
+
+    -->
+
+    <div class="container" style="border:2px solid black;padding: 20px;">
+        <p>Lorem ipsum dolor sit.</p>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <div>Lorem ipsum dolor sit amet.</div>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <br><br>
+
+    <div class="con2" style="border:2px solid red; padding: 20px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quidem!</p>
+    </div>
+
+    <script>
+
+        //  create method in js of html
+        // let creatE = document.createElement("div");
+        // console.log(creatE)
+        // let creatText = document.createTextNode("hello ji");
+        // console.log(creatText)
+        // let creatCom = document.createComment("this is comment in javascript");
+        // console.log(creatCom)
+
+
+        // how to append value in html tag
+        // let createh = document.createElement("h1");
+        // let creatT = document.createTextNode("this is javascript text");
+        // createh.appendChild(creatT)
+        // document.querySelector(".container").appendChild(createh)
+
+
+        //insertBefore
+        // let creatH = document.createElement("h1");
+        // let txt = document.createTextNode('this is my mobile');
+        // creatH.appendChild(txt);
+        // let a = document.querySelector("div");
+        // document.body.insertBefore(creatH, a);
+
+        
+        //insertAdjacentText
+        // let creatext = '<h1>this is IT class<h1>';
+        // let targetcon = document.querySelector(".container");
+        // targetcon.insertAdjacentText("beforebegin", creatext);
+        // targetcon.insertAdjacentText("afterbegin", creatext);
+        // targetcon.insertAdjacentText("beforeend", creatext);
+        // targetcon.insertAdjacentText("afterend", creatext);
+
+
+        // insertAdjacentHTML
+        // let creatext = '<h1>this is IT class<h1>';
+        // let targetcon = document.querySelector(".container");
+        // targetcon.insertAdjacentHTML("beforebegin", creatext);
+        // targetcon.insertAdjacentHTML("afterbegin", creatext);
+        // targetcon.insertAdjacentHTML("beforeend", creatext);
+        // targetcon.insertAdjacentHTML("afterend", creatext);
+
+
+        //insertAdjacentElement
+        // let crateTag =document.createElement("div");
+        // let creatA = document.querySelector(".container");
+        // let show = creatA.insertAdjacentElement("beforeend", crateTag);
+        // console.log(show)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // concat
+        let primeNumbers = [2, 3, 5, 7]
+        let evenNumbers = [2, 4, 6, 8]
+        let joinArray = primeNumbers.concat(evenNumbers);
+        console.log(joinArray)
+        let joinArraynew = primeNumbers.concat("pradeep", "sandeep", 34, 56, 78, evenNumbers);
+        console.log(joinArraynew)
+
+        // The constructor is a property in JavaScript, so it doesn't take any parameters.
+        let languages = ["JavaScript", "Java", "Python"];
+        let contstructor = languages.constructor;
+        console.log(contstructor);
+
+        // Array copyWithin()arr.copyWithin(target, start, end)
+        let numbers = [1, 2, 3, 4, 5];
+        numbers.copyWithin(0, 4);
+        console.log(numbers);
+        let letters = ["a", "b", "c", "d"];
+        letters.copyWithin(2, 1);
+        console.log(letters);
+
+
+
+        // The entries() method returns a new Array Iterator object containing key/value pairs for each array index.
+        const alphabets = ["A", "B", "C"];
+        let iterator = alphabets.entries();
+        for (let entry of iterator) {
+            console.log(entry);
+        }
+
+        //The every() method checks if all the array elements pass the given test function.
+        // function that checks whether
+        // the age is 18 or above
+        function checkAdult(age) {
+            return age >= 18;
+        }
+        const ageArray = [34, 23, 20, 26, 12];
+        let check = ageArray.every(checkAdult);
+        console.log(check)
+
+        //The fill() method returns an array by filling all elements with a specified value.
+        // defining an array  arr.fill(value, start, end)
+        var fruits = ['Apple', 'Banana', 'Grape'];
+        fruits.fill("Cherry", 0, 1);
+        console.log(fruits);
+
+        // The filter() method returns a new array with all elements that pass the test defined by the given function.
+
+        let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function checkEven(number) {
+            if (number % 2 == 0)
+                return true;
+            else
+                return false;
+        }
+        let evenNumbers1 = numbers1.filter(checkEven);
+        console.log(evenNumbers1);
+
+        // search method
+        const languages1 = ["JavaScript", "Python", "Ruby", "C", "C++", "Swift", "PHP", "Java"];
+        function searchFor(arr, query) {
+            function condition(element) {
+                return element.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+            }
+            return arr.filter(condition);
+        }
+        let newArr = searchFor(languages1, "ja");
+        const searchArr = (arr, query) => arr.filter(element => element.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+
+        let newLanguages = searchArr(languages1, "p");
+        console.log(newLanguages);
+
+
+        // finde method
+        const team = [
+            { name: "Bill", age: 10 },
+            { name: "Linus", age: 15 },
+            { name: "Alan", age: 20 },
+            { name: "Steve", age: 34 },
+        ];
+
+        function IsAdult(member) {
+            return member.age<=10;
+        }
+        console.log(team.find(IsAdult))
+
+
+
+    </script>
+
+</body>
+
+</html>

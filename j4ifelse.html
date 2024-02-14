@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+ 
+
+  <script>
+ 
+
+    // let user = Number(prompt("Enter Your Age"));
+
+    // if (user >= 18) {
+    //   document.write("eligible for vote")
+    // } else {
+    //   document.write('not eligible for vote')
+    // }
+
+    // if(10>0)
+    // document.write("h1")
+    // document.write("by")
+    // document.write("somya")
+
+    // if (10 < 0)
+    //   document.write("h1")
+    // document.write("by")
+    // document.write("somya")
+
+    // if ("hi") {
+    //   document.write("hi somya")
+    // }
+    // else {
+    //   document.write("not hi")
+    // }
+
+
+
+    // let marks = Number(prompt("Enter your Marks"))
+    // if (marks >= 80 && marks <= 100) {
+    //   document.write("your Grade is  A+", marks)
+    // } else if ((marks >= 70 && marks < 80)) {
+    //   document.write("Your Grade is B+", marks)
+    // } else if (marks >= 33 && marks < 70) {
+    //   document.write("your Grade is C", marks)
+    // } else if (marks >= 0 && marks < 33) {
+    //   document.write("please try next year");
+    // } else {
+    //   document.write("please Enter Valid marks")
+    // }
+
+
+    // nested if
+    // let num = Number(prompt("enter Number"))
+    // if (num > 12) {
+    //   if (num % 2 == 0) {
+    //     document.write("it is event number")
+    //   } else {
+    //     document.write("odd")
+    //   }
+    // } else {
+    //   document.write("not greater than 12")
+    // }
+
+    //  for 
+     
+
+    let laptop = {
+      color: "black",
+      price: 20222,
+      shape: "square",
+      brand: "hp"
+    };
+
+
+    for (let x in laptop) {
+      document.write(x, ":", laptop[x], "<br>")
+    }
+
+    let a = [12, 34, 56, 78, 9, "this is value", "laptop", "mobile"];
+    for (let v in a) {
+      document.write(a[v])
+    }
+
+    document.write("<br>")
+    for (let z of a) {
+      document.write(z)
+    }
+
+    document.write("<br>")
+    // nested loops
+    document.write("<br>")
+
+    // for (let i = 5; i >= 1; i--) {
+    //   for (let j = 1; j <= i; j++) {
+    //     document.write(j)
+    //   }
+    //   document.write("<br>")
+    // }
+
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = i; j <= 5; j++) {
+    //     document.write(j)
+    //   }
+    //   document.write("<br>")
+    // }
+
+
+
+    // for (let i = 0; i < 10; i++) {
+    //   if (i == 5) {
+    //     break;
+    //   }
+    //   document.write(i)
+    // }
+
+
+    // document.write("<br>")
+    // for (let i = 0; i < 10; i++) {
+    //   if (i == 5) {
+    //     continue;
+    //   }
+    //   document.write(i)
+    // }
+
+
+    // switch
+
+    let user = Number(prompt("enter val"))
+
+
+    switch (user) {
+      case 1:
+        document.write("monday");
+        break;
+        break;
+      case 2:
+        document.write("tuesday");
+        break;
+
+      case 3:
+        document.write("wednesday");
+        break;
+
+      case 4:
+        document.write("thursday");
+        break;
+
+      case 5:
+        document.write("friday");
+        break;
+
+      case 6:
+        document.write("saturday");
+        break;
+
+      case 7:
+        document.write("sunday");
+        break;
+      default:
+        document.write("please enter Val");
+    }
+ 
+  </script>
+</body>
+
+</html>

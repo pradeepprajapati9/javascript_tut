@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 300px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box"></div>
+
+
+    <button>cleartimeout</button>
+    <script>
+
+        // The setInterval() method continues calling the function until clearInterval() is  called 
+
+        // let a=0;
+        //  let set=setInterval(test,1000)
+
+        //  function test(){
+        //     a=a+1;
+        //      if(a==1){
+        //         document.write("this is first")
+        //      }else if(a==2){
+        //         document.write("this is second message")
+        //      }else if(a==3){
+        //        document.write("this is third message")
+        //      }
+        //      else{
+        //         clearInterval(set)
+        //      }
+
+        //  }
+
+
+
+        //    let a=0;
+        //    let set =setInterval(slider,1000);
+        //    function slider(){
+        //     a=a+100;
+        //     if(a<=1000){
+        //      let box=document.querySelector(".box");
+        //        box.style.marginLeft=a+"px";
+        //     }
+        //    }
+
+ 
+        let time = setTimeout(remote, 4000);
+
+        function remote() {
+            document.write("this is message")
+        }
+        document.querySelector("button").addEventListener("click", function () {
+            clearTimeout(time)
+        })
+ 
+        // let a=0;
+        // let set=setInterval(abc,1000);
+
+        // function abc(){
+        //     a=a+1;
+        //     if(a==1){
+        //         document.write("this is first number",a);
+        //     }else if(a==2){
+        //         document.write("this is second number",a)
+        //     }else if(a==3){
+        //         document.write("this is third number",a)
+        //     }else{
+        //         clearInterval(a)
+        //     }
+        // }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //destructure object
+        let creat = {
+            name: "mobile",
+            price: 2500,
+            charger: 220
+        }
+        let { name, price, charger } = creat;
+        console.log(name);
+        console.log(price);
+        console.log(charger);
+
+
+
+        let createobject = {
+            ProId: '1',
+            ProName: 'Mobile',
+            ProPrice: 2500,
+            ProCharger: 220
+        }
+        console.log(createobject)
+        let { ProId, ProName, ProPrice, ProCharger } = createobject;
+        console.log(ProId);
+        console.log(ProName);
+        console.log(ProPrice);
+        console.log(ProCharger);
+
+
+
+
+        let Cobje = {
+            ProId1: '2',
+            ProName1: 'Laptop',
+            ProPrice1: 2500,
+            ProCharger1: 220
+        }
+
+        let { ProId1:id,ProName1:N,ProPrice1:P, ProCharger1:Ch } = Cobje;
+        console.log(id);
+        console.log(N);
+        console.log(P);
+        console.log(Ch);
+        
+    </script>
+
+</body>
+
+</html>

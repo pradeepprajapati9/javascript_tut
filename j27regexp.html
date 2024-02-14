@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<!--
+A regular expression is a sequence of characters that forms a search pattern.
+The search pattern can be used for text search and text replace operations. 
+
+There are following different type of characters of a regular expression:
+1)Metacharacters
+2)Quantifier
+3)Groups and Ranges
+4)Escape Characters or character classes
+-->
+
+    <script>
+
+        // var str = "hello world";
+        // var reg = /world/;
+        // var result = str.match(reg);
+        // console.log(result);
+
+        // var str = "hello world";
+        // var reg = /world/;
+        // var result = str.replace(reg, "hello");
+        // console.log(result);
+
+        // var str = "hello world";
+        // var reg = /world/;
+        // var result = str.search(reg);
+        // console.log(result);
+
+
+        // var str = "hello world";
+        // var reg = /WORLD/i;  // Perform case-insensitive matching
+        // var result = str.search(reg);
+        // console.log(result);
+
+        // var str = "hello world";
+        // var reg = /world/g; //	Perform a global match (find all matches rather than stopping after the first match)
+        // var result = str.search(reg, "hello");
+        // console.log(result);
+
+
+
+        var str = "this is laptop andLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only this  five centuries, but also the leap into electronic typesetting, remaining essentially this unchanged. It was popularised in the 1960s with the release of Letraset sheets containing this Lorem Ipsum passages, and more recently with desktop publishing software 998 234 123 456 like Aldus PageMaker including versions of Lorem Ipsum";
+        // var reg = /this/;
+        // var result = str.match(reg);
+        // if (result) {
+        //     console.log("I Will Found It:" + result);
+        // } else {
+        //     console.log("Not Found");
+        // }
+
+        // var reg = /this|is|web/;
+        // var result = str.match(reg);
+        // if (result) {
+        //     console.log("I Will Found It:" + result);
+        // } else {
+        //     console.log("Not Found");
+        // }
+
+
+        // var reg = /998/;
+        // var result = str.match(reg);
+        // if (result) {
+        //     console.log("I Will Found It:" + result);
+        // } else {
+        //     console.log("Not Found");
+        // }
+
+        var reg = /[ a-z]/i;
+        var result = str.match(reg);
+        if (result) {
+            console.log("I Will Found It:" + result);
+        } else {
+            console.log("Not Found");
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

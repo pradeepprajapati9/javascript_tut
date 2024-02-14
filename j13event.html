@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con {
+            height: 100px;
+            border: 2px solid black;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body >
+    <!-- 
+    event in javascript BROWSER EVENT
+    a event in javascirt is which is use to perform some action at some time -->
+
+    <button onclick="single()">click</button>
+    <button ondblclick="double()">double</button>
+    <button oncontextmenu="right()">right</button>
+    <button onmouseleave="leave()">leave</button>
+    <button onmouseenter="enter()">enter</button>
+    <button onmouseout="out()">out</button>
+
+
+    <select name="" id="select" onchange="changes()">
+        <option value="hindi">hindi</option>
+        <option value="english">english</option>
+        <option value="skt">skt</option>
+        <option value="math">math</option>
+        <option value="sst">sst</option>
+    </select>
+
+    <div class="con">
+
+    </div>
+
+
+    <script>
+
+        function single() {
+            document.write("this is single")
+        }
+
+        function double() {
+            document.write("this is double function")
+        }
+
+        function right() {
+            document.write("this is right click function")
+        }
+
+        function leave() {
+            document.write("this is leave function")
+        }
+
+        function enter() {
+            document.write("this is enter function")
+        }
+
+
+        function out() {
+            document.write("this is out function")
+        }
+
+
+        function changes() {
+            let x = document.getElementById("select").value;
+            document.getElementsByClassName("con")[0].innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>
